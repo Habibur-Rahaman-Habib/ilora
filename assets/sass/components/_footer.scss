@@ -1,183 +1,144 @@
 footer {
-  .footer_top {
-    background: var(--secondary-color);
-    .container {
-      .row {
-        &.border-bottom {
-          padding-bottom: 50px;
-          border-color: var(--border-color) !important;
-        }
-      }
+  background: url("../image/background/1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer_content {
+  h5 {
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+  p {
+    width: 295px;
+    color: var(--white);
+    margin-bottom: 35px;
+    @media (max-width: 575px) {
+      width: 100%;
     }
-    .footer_content {
-      h5 {
-        font-weight: 600;
+  }
+  ul {
+    li {
+      color: var(--white);
+      &:hover {
+        a {
+          color: var(--orange);
+          padding-left: 7px;
+          i {
+            color: var(--text);
+          }
+        }
+      }
+      & + li {
+        margin-top: 11px;
+      }
+      a {
         color: var(--white);
-        margin-bottom: 55px;
-      }
-      p {
-        width: 295px;
-        color: var(--white);
-        margin-bottom: 35px;
-        @media (max-width: 575px) {
-          width: 100%;
-        }
-      }
-      ul {
-        li {
-          color: var(--white);
-          &:hover {
-            a {
-              color: var(--primary-color);
-              padding-left: 7px;
-            }
-          }
-          & + li {
-            margin-top: 8px;
-          }
-          span {
-            font-weight: bold;
-          }
-          a {
-            color: var(--white);
-            margin-bottom: 15px;
-            display: block;
-            transition: var(--transition);
-            i {
-              font-size: 12px;
-              color: var(--primary-color);
-              display: inline-block;
-              margin-right: 4px;
-            }
-          }
-        }
-      }
-      .footer_blog {
-        .fblog_item {
-          .fblog_img {
-            img {
-              width: 100%;
-            }
-          }
-          .fblog_content {
-            a {
-              font-size: 18px;
-              color: var(--white);
-              display: block;
-              transition: var(--transition);
-              &:hover {
-                color: var(--primary-color);
-              }
-            }
-            span {
-              color: var(--primary-color);
-              display: block;
-              margin-top: 8px;
-            }
-          }
-        }
-      }
-    }
-    .footer_middle {
-      padding: 60px 0;
-      padding-bottom: 30px;
-      .footer_subscrive {
-        @media (max-width: 991px) {
-          text-align: center;
-          form {
-            margin: auto;
-          }
-        }
-        h6 {
-          margin-bottom: 30px;
-          color: var(--white);
-          font-weight: 700;
-        }
-        form {
-          position: relative;
-          width: 518px;
-          height: 60px;
-          max-width: 100%;
-          input {
-            width: 100%;
-            height: 100%;
-            background: var(--secondary-color);
-            border: 1px solid var(--border-color);
-            color: white;
-            padding-left: 20px;
-            &::placeholder {
-              color: var(--border-color);
-            }
-          }
-          button {
-            position: absolute;
-            right: 5px;
-            border: none;
-            width: 168px;
-            height: 50px;
-            font-weight: 600;
-            top: 5px;
-            background: var(--primary-color);
-            @media (max-width: 500px) {
-              width: 115px;
-            }
-            &:hover {
-              color: var(--secondary-color);
-              &::before {
-                width: 100%;
-              }
-            }
-            &::before {
-              background: var(--white);
-            }
-          }
-        }
-      }
-      .footer_social {
-        .social_icon {
-          margin-bottom: 25px;
-          li {
-            &:hover {
-              a {
-                background: var(--white);
-                color: var(--primary-color);
-              }
-            }
-            a {
-              background: var(--primary-color);
-              color: var(--white);
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              width: 44px;
-              height: 44px;
-              transition: var(--transition);
-            }
-          }
-        }
-        .page_link {
-          li {
-            &:hover {
-              a {
-                color: var(--primary-color);
-              }
-            }
-            a {
-              font-size: 18px;
-              font-weight: 600;
-              color: white;
-              transition: var(--transition);
-            }
-          }
+        display: block;
+        transition: var(--transition);
+        width: 165px;
+        font-family: var(--lato);
+        i {
+          color: var(--text);
+          font-size: 13px;
+          display: inline-block;
+          margin-right: 5px;
         }
       }
     }
   }
-  .footer_bottom {
-    padding: 40px 0;
-    background: black;
-    p {
+}
+
+.footer_bottom {
+  padding: 40px 0;
+  p {
+    color: var(--white);
+  }
+}
+
+.social_icon {
+  li {
+    &:hover {
+      a {
+        color: var(--orange);
+      }
+    }
+    a {
+      background: var(--gray);
       color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 43px;
+      height: 42px;
+      transition: var(--transition);
+      margin-bottom: 0;
+      font-size: 17px;
+    }
+  }
+}
+
+.footer_contact {
+  li {
+    p {
+      font-family: var(--lato);
+    }
+    a {
+      font-size: 16px;
+      font-family: var(--lato);
+      &:hover {
+        color: var(--orange);
+      }
+    }
+    & + li {
+      margin-top: 13px;
+    }
+  }
+}
+
+.footer_subscrive {
+  h4 {
+    width: 433px;
+    margin: auto;
+    max-width: 100%;
+  }
+  form {
+    position: relative;
+    height: 64px;
+    input {
+      background: var(--gray);
+      width: 100%;
+      height: 100%;
+      font-family: var(--lato);
+      color: var(--text);
+      padding-left: 20px;
+      border: 0;
+      &::placeholder {
+        color: var(--text);
+      }
+    }
+    button {
+      position: absolute;
+      right: 5px;
+      border: none;
+      width: 168px;
+      height: 50px;
+      font-weight: 600;
+      top: 5px;
+      background: var(--primary-color);
+      @media (max-width: 500px) {
+        width: 115px;
+      }
+      &:hover {
+        color: var(--secondary-color);
+        &::before {
+          width: 100%;
+        }
+      }
+      &::before {
+        background: var(--white);
+      }
     }
   }
 }
