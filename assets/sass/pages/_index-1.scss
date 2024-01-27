@@ -221,7 +221,7 @@
       position: relative;
       img {
         transform: scale(1);
-        transition: var(--transition_base);
+        transition: var(--transition);
       }
       &::before {
         content: "";
@@ -297,7 +297,7 @@
     i {
       color: white;
       font-size: 35px;
-      transition: var(--transition_base);
+      transition: var(--transition);
     }
   }
 }

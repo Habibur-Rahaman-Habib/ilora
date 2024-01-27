@@ -1,6 +1,19 @@
 // Google Font
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 :root {
+  --lato: "Lato", sans-serif;
+  --josefin: "Josefin Sans", sans-serif;
+  --black: #1c1c1c;
+  --orange: #ee6b0b;
+  --white: #fff;
+  --text: #7a7a7a;
+  --transition: all 0.3s ease-in;
+
+  //
+  //
+  //
+  //
   --primary-color: #ea062b;
   --secondary-color: #111111;
   --white: #fff;
@@ -13,7 +26,7 @@
   --p-color: #666666;
   --border-color: #cacaca;
   --shadow: 0px 0px 20px #0000002b;
-  --transition_base: 0.3s;
+  --transition: 0.3s;
   --gray_bg: #f9f9f9;
   --sidebar-color: #f9f9f9;
 }
