@@ -20,11 +20,11 @@
         17. Accordion Boxs
     */
 
-    //fancy box video popup 
+//fancy box video popup 
     Fancybox.bind("[data-fancybox]", {
     });
 
-
+// all page slider
     $(".campaign_slider").slick({
         slidesToShow: 2,
         arrows: false,
@@ -74,12 +74,16 @@
     });
 
     $(".hm1_hero_slider").slick({
+        dots:true,
         autoplay: true,
         slidesToShow: 1,
-        prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button class="next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
-        speed: 800,
+        prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-arrow-left-long"></i></button>',
+        nextArrow: '<button class="next-arrow"><i class="fa-solid fa-arrow-right-long"></i></button>',
+        speed: 1200,
         fade: true,
+        customPaging: function (slider, i) {
+            return '<span></span>';
+        },
     });
 
 
@@ -226,6 +230,23 @@
             delay: 10,
             time: 5000
         });
+    });
+
+    // Button hover js
+    $(function () {
+        $('.default-btn')
+            .on('mouseenter', function (e) {
+                var parentOffset = $(this).offset(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+                $(this).find('span').css({ top: relY, left: relX })
+            })
+            .on('mouseout', function (e) {
+                var parentOffset = $(this).offset(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+                $(this).find('span').css({ top: relY, left: relX })
+            });
     });
 
 

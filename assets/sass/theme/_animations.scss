@@ -1,3 +1,16 @@
+// video play 
+@keyframes blood3 {
+  0% {
+    box-shadow: 0 0 0 0 red;
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(1, 93, 199, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 93, 199, 0);
+  }
+}
+
 //ticker animation
 @keyframes ticker {
     0% {

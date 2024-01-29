@@ -6,6 +6,13 @@ body {
   font-family: var(--josefin);
 }
 /******  Font Size  ********/
+
+h1 {
+  font-size: 150px;
+  @include screen-768 {
+  }
+}
+
 h2 {
   font-size: 60px;
   @include screen-768 {
@@ -35,6 +42,12 @@ p {
 
 .f-72 {
   font-size: 72px;
+  @include screen-768 {
+  }
+}
+
+.f-36 {
+  font-size: 36px;
   @include screen-768 {
   }
 }
@@ -72,9 +85,11 @@ p {
 .bb {
   border-bottom: 1px solid var(--gray);
 }
+
 .tran {
   transition: var(--transition);
 }
+
 .img {
   overflow: hidden;
   img {
@@ -85,18 +100,10 @@ p {
   }
 }
 
-.common_title {
-  p {
-    color: var(--primary-color);
-    margin-bottom: 25px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  h2 {
-    font-weight: 700;
-    text-transform: capitalize;
-  }
+.justify {
+  text-align: justify;
 }
+
 
 .center {
   display: inline-flex;
@@ -147,27 +154,44 @@ select:focus {
 
 .custom_dots {
   .slick-dots {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 50px;
+    cursor: pointer;
+    top: 50%;
+    position: absolute;
+    right: 79%;
+    transform: translateY(-50%);
     li {
       span {
         margin: 3px 0;
-        border: 4px solid var(--gray);
-        border-radius: 50%;
-        width: 18px;
+        width: 2px;
         height: 18px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         font-size: 10px;
-        outline: 1px solid var(--primary-color);
-        background: transparent;
+        background: var(--white);
       }
       &.slick-active span {
-        background: var(--primary-color);
+        background: rgb(151 151 151);
       }
     }
+  }
+}
+
+.video_play {
+  margin-bottom: 35px;
+  a {
+    width: 65px;
+    height: 65px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    animation: blood3 2.2s infinite;
+    i {
+      font-size: 20px;
+    }
+  }
+  h6 {
+    font-weight: 600;
+    margin-left: 15px;
   }
 }
