@@ -176,6 +176,31 @@ select:focus {
     }
   }
 }
+.custom_dots2 {
+  .slick-dots {
+    cursor: pointer;
+    top: 50%;
+    position: absolute;
+    right: 79%;
+    transform: translateY(-50%);
+    li {
+      span {
+        margin: 3px 0;
+        width: 10px;
+        height: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        background:  rgb(151 151 151);
+        border-radius: 50%;
+      }
+      &.slick-active span {
+        background: var(--orange);
+      }
+    }
+  }
+}
 
 .video_play {
   margin-bottom: 35px;

@@ -25,10 +25,12 @@
     });
 
 // all page slider
-    $(".campaign_slider").slick({
-        slidesToShow: 2,
+    $(".testi_slider").slick({
+        slidesToShow: 1,
         arrows: false,
         dots: true,
+        autoplay:true,
+        speed:1000,
         customPaging: function (slider, i) {
             return '<span></span>';
         },
@@ -42,31 +44,6 @@
         ]
     });
 
-    $(".testi_slider").slick({
-        slidesToShow: 3,
-        arrows: false,
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 1150,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 765,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-        ]
-    });
     $(".testimonials__slider").slick({
         slidesToShow: 1,
         arrows: false,
