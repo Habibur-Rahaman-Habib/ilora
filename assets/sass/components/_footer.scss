@@ -120,24 +120,16 @@ footer {
     }
     button {
       position: absolute;
-      right: 5px;
+      right: 0px;
       border: none;
-      width: 168px;
-      height: 50px;
-      font-weight: 600;
-      top: 5px;
-      background: var(--primary-color);
+      top: 0px;
+      padding: 18px 46px;
+      border: 1px solid transparent;
+      &:hover{
+        border: 1px solid var(--orange);
+      }
       @media (max-width: 500px) {
         width: 115px;
-      }
-      &:hover {
-        color: var(--secondary-color);
-        &::before {
-          width: 100%;
-        }
-      }
-      &::before {
-        background: var(--white);
       }
     }
   }

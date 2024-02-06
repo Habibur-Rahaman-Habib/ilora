@@ -368,79 +368,117 @@
     }
   }
 }
+.appoint_contact{
+  div.white_bg.text-center{
+    padding: 22px 27px;
+  }
+}
 
-/********** blood project css ******************/
+.site_form{
+  form{
+    input{
+      height: 50px;
+      padding-left: 20px;
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      &::placeholder{
+        color: #d6d4d4;
+      }
+    }
+    textarea{
+      color: #d6d4d4;
+      padding-left: 20px;
+      border: 1px solid #e8e8e8;
+      padding-top: 20px;
+    }
+    button.default-btn{
+      padding: 10px 20px;
+    font-size: 16px;
+    }
+  }
+}
+//book an appointed
+.appoint{
+  background: url("../image/background/appoin.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 // news
 .news_content_item {
   box-shadow: var(--shadow);
   height: 100%;
   &:hover {
-    .news_img {
-      img {
-        transform: scale(1.09);
+    .news_img{
+      img{
+        transform: scale(1);
       }
-      a {
+      &::before{
         visibility: visible;
         opacity: 1;
-        transform: scale(1);
+      }
+      h6{
+        background: var(--black);
       }
     }
     .news_content {
       a {
-        color: var(--primary-color);
+        color: var(--orange);
       }
     }
   }
   .news_img {
-    position: relative;
-    overflow: hidden;
-    img {
-      width: 100%;
-      transition: 0.4s;
-      transform: scale(1);
-    }
-    a {
+    &::before{
+      content: "";
       position: absolute;
+      left: 0;
+      right:0;
       width: 100%;
       height: 100%;
-      background: #00000094;
-      justify-content: center;
-      align-items: center;
-      color: var(--white);
-      left: 0;
-      top: 0;
-      display: inline-flex;
-      font-size: 26px;
+      background: #00000059;
       visibility: hidden;
       opacity: 0;
       transition: var(--transition);
-      transform: scale(0);
+      z-index: 1;
+    }
+    img{
+      transform: scale(1.05);
+      transition: var(--transition);
+    }
+    h6{
+      bottom: 0;
+      padding: 14px 23px;
+      background: var(--orange);
+      left: 15px;
+      z-index: 2;
+      position: relative;
     }
   }
   .news_content {
-    padding: 20px;
+    padding: 18px;
     background: var(--white);
+    padding-bottom: 22px;
     .meta {
-      margin-bottom: 25px;
+      margin-bottom: 16px;
       span {
-        color: var(--primary-color);
         font-size: 16px;
       }
     }
     h5 {
-      margin-bottom: 30px;
+      font-size: 22px;
+      margin-bottom: 9px;
       font-weight: 700;
-      color: var(--secondary-color);
+      color: var(--black);
       transition: var(--transition);
       &:hover {
-        color: var(--primary-color);
+        color: var(--orange);
       }
     }
     p {
-      margin-bottom: 25px;
+      margin-bottom: 13px;
     }
     a {
-      color: var(--secondary-color);
+      color: var(--black);
       font-weight: 700;
       font-size: 16px;
       transition: var(--transition);
@@ -451,98 +489,5 @@
   }
 }
 
-// team
-.team {
-  padding-bottom: 100px;
-  @media (max-width: 767px) {
-    padding-bottom: 40px;
-  }
-  .team_details {
-    padding: 25px;
-    padding-bottom: 0;
-    background: var(--white);
-    -webkit-box-shadow: 0px 0px 20px #0000002b;
-    box-shadow: 0px 0px 20px #0000001c;
-    &:hover {
-      .team_img {
-        overflow: hidden;
-        img {
-          transform: scale(1.09);
-        }
-        ul {
-          visibility: visible;
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-    }
-    .team_img {
-      position: relative;
-      img {
-        transition: 0.5s;
-        transform: scale(1);
-      }
-      ul {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #0000008c;
-        left: 0;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 11px;
-        transform: scale(0.6);
-        transition: var(--transition);
-        visibility: hidden;
-        opacity: 0;
 
-        li {
-          &:hover {
-            a {
-              background: var(--primary-color);
-              color: white;
-            }
-          }
-          &:nth-child(1) {
-            a {
-              border-radius: 25px 0px 0px 25px;
-            }
-          }
-          &:nth-child(4) {
-            a {
-              border-radius: 0px 25px 25px 0px;
-            }
-          }
-          a {
-            width: 40px;
-            height: 40px;
-            background: var(--white);
-            color: var(--primary-color);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-          }
-        }
-      }
-    }
-    .team_content {
-      padding: 30px;
-      h5 {
-        margin-bottom: 20px;
-        font-weight: 600;
-        transition: var(--transition);
-        color: var(--secondary-color);
-        &:hover {
-          color: var(--primary-color);
-        }
-      }
-      p {
-        font-size: 18px;
-        font-weight: 500;
-      }
-    }
-  }
-}
+

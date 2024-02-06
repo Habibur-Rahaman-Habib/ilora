@@ -179,10 +179,12 @@ select:focus {
 .custom_dots2 {
   .slick-dots {
     cursor: pointer;
-    top: 50%;
     position: absolute;
-    right: 79%;
-    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    bottom: -14%;
+    left: 50%;
+    transform: translateX(-50%);
     li {
       span {
         margin: 3px 0;
