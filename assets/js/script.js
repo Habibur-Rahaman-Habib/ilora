@@ -20,6 +20,11 @@
         17. Accordion Boxs
     */
 
+// data background
+    $('[data-background]').each(function () {
+        $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
+    });
+
 //fancy box video popup 
     Fancybox.bind("[data-fancybox]", {
     });
@@ -63,7 +68,6 @@
         },
     });
 
-
     $(".gallary_slider").slick({
         slidesToShow: 3,
         arrows: false,
@@ -104,29 +108,17 @@
         ]
     });
 
-
     $(".contact__slider").slick({
         slidesToShow: 1,
         arrows: false,
         slidesToScroll: 1,
     });
 
-
     $(".user__Slider").slick({
         slidesToShow: 2,
         arrows: false,
         slidesToScroll: 1,
     });
-
-    $(".km_blog__slider").slick({
-        slidesToShow: 1,
-        arrows: true,
-        slidesToScroll: 1,
-        prevArrow: '<button class="prev-arrow"><i class="fas fa-arrow-left"></i></button>',
-        nextArrow: '<button class="next-arrow"><i class="fas fa-arrow-right"></i></button>',
-    });
-
-
 
     $('.km__main__slider').slick({
         slidesToShow: 1,
@@ -139,8 +131,8 @@
         slidesToScroll: 1,
         variableWidth: true,
         asNavFor: '.km__main__slider',
-        prevArrow: '<button class="prev-arrow"><i class="fas fa-arrow-left"></i></button>',
-        nextArrow: '<button class="next-arrow"><i class="fas fa-arrow-right"></i></button>',
+        prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+        nextArrow: '<button class="next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
     });
 
 
@@ -191,14 +183,14 @@
 
     // sticky header
 
-    $(window).scroll(function () {
+    // $(window).scroll(function () {
 
-        if ($(window).scrollTop() > 200) {
-            $('.header_bottom').addClass('fixed_menu');
-        } else {
-            $('.header_bottom').removeClass('fixed_menu');
-        }
-    });
+    //     if ($(window).scrollTop() > 200) {
+    //         $('.header_bottom').addClass('fixed_menu');
+    //     } else {
+    //         $('.header_bottom').removeClass('fixed_menu');
+    //     }
+    // });
 
 
     // counter UP

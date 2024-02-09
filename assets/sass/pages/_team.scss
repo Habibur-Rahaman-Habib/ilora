@@ -1,0 +1,20 @@
+.our_team2{
+    .team_img{
+        .team_hover{
+            border-radius: 50%;
+            width: 96%;
+            height: 97%;
+            left: 7px;
+            top: 6px;
+            ul{
+                li{
+                    a{
+                        background: var(--orange);
+                        color: white;
+                        outline: 2px dotted var(--orange);
+                    }
+                }
+            }
+        }
+    }
+}

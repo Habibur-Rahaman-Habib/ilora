@@ -15,6 +15,9 @@
   box-shadow: 0px 0px 20px #ee6b0b94;
   padding: 15px 46px;
   font-size: 18px;
+  @include screen-400{
+    padding: 10px 40px;
+  }
   span {
     position: absolute;
     display: inline-block;
@@ -63,6 +66,40 @@
   }
   &:hover {
     color: var(--dark);
+    span {
+      width: 225%;
+      height: 562.5px;
+    }
+  }
+}
+
+.default-btn2 {
+  border: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.3s;
+  opacity: 1;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: 0.5s;
+  padding: 15px 0;
+  span {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background-color: var(--orange);
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 1;
+  }
+  &:hover {
     span {
       width: 225%;
       height: 562.5px;

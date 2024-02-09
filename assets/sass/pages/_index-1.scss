@@ -152,18 +152,31 @@
 //welcome to our
 .wel_shape {
   bottom: 6%;
-  left: 17%;
+  left: 13%;
   z-index: -1;
+  @media (max-width: 1530px) {
+    left: 9%;
+  }
+  @media (max-width: 1420px) {
+    left: 5%;
+  }
+  @media (max-width: 1220px) {
+    left: 1%;
+  }
+  @media (max-width: 1120px) {
+    bottom:10%
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .wl_year {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  right: 0;
+  right: -70px;
   top: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,8 +184,23 @@
   border: 1.5px solid var(--orange);
   outline: 9px solid white;
   padding: 6px;
+  transform: translateY(-50%);
+  @include screen-768{
+    right: 10px;
+    top: inherit;
+    bottom: 10px;
+    transform: inherit;
+    width: 130px;
+    height: 130px;
+  }
 }
 
+.welcome_right {
+  padding-left: 80px;
+  @include screen-768{
+    padding-left: 0;
+  }
+}
 // counter
 .hm1_counter {
   background: url("../image/background/2.jpg") no-repeat;
@@ -186,7 +214,6 @@
 
 // service
 .service {
-  background: url("../image/banner/3.png") no-repeat;
   background-size: cover;
   background-position: bottom;
   .service_item {
@@ -199,6 +226,9 @@
       }
     }
     .ser_img {
+      img {
+        width: 100%;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -221,11 +251,17 @@
           }
         }
       }
+      h5 {
+        &:hover {
+          color: var(--orange);
+        }
+      }
     }
   }
 }
 
 .more_service {
+  flex-wrap: wrap;
   &::before {
     content: "";
     position: absolute;
@@ -236,9 +272,16 @@
     left: 50%;
     top: 56%;
     transform: translate(-50%, -50%);
+    @include screen-575 {
+      top: 50%;
+    }
   }
   h4 {
     width: 62%;
+    @include screen-768 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
   .more_shape {
     right: 30%;
@@ -269,6 +312,7 @@
 }
 
 // our best work
+
 .best_work {
   &:hover {
     .bw_hover {
@@ -303,6 +347,12 @@
     }
   }
 }
+.rows {
+  @media (max-width: 460px) {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}
 
 // our team
 .our_team {
@@ -316,6 +366,9 @@
     }
   }
   .team_img {
+    img {
+      width: 100%;
+    }
     .team_hover {
       top: 0;
       left: 0;
@@ -368,56 +421,59 @@
     }
   }
 }
-.appoint_contact{
-  div.white_bg.text-center{
+
+//book an appointed
+.appoint {
+  background-size: cover;
+  background-position: center;
+}
+
+.appoint_contact {
+  div.white_bg.text-center {
     padding: 22px 27px;
+  }
+  &include screen-1260 {
+    padding: 20px 25px;
   }
 }
 
-.site_form{
-  form{
-    input{
+.site_form {
+  form {
+    input {
       height: 50px;
       padding-left: 20px;
       border: 1px solid #e8e8e8;
       border-radius: 5px;
-      &::placeholder{
+      &::placeholder {
         color: #d6d4d4;
       }
     }
-    textarea{
+    textarea {
       color: #d6d4d4;
       padding-left: 20px;
       border: 1px solid #e8e8e8;
       padding-top: 20px;
     }
-    button.default-btn{
-      padding: 10px 20px;
-    font-size: 16px;
+    button.default-btn {
+      padding: 13px 20px;
+      font-size: 16px;
     }
   }
 }
-//book an appointed
-.appoint{
-  background: url("../image/background/appoin.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 // news
 .news_content_item {
   box-shadow: var(--shadow);
   height: 100%;
   &:hover {
-    .news_img{
-      img{
+    .news_img {
+      img {
         transform: scale(1);
       }
-      &::before{
+      &::before {
         visibility: visible;
         opacity: 1;
       }
-      h6{
+      h6 {
         background: var(--black);
       }
     }
@@ -428,11 +484,11 @@
     }
   }
   .news_img {
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       left: 0;
-      right:0;
+      right: 0;
       width: 100%;
       height: 100%;
       background: #00000059;
@@ -441,17 +497,21 @@
       transition: var(--transition);
       z-index: 1;
     }
-    img{
+    img {
       transform: scale(1.05);
       transition: var(--transition);
+      width: 100%;
     }
-    h6{
+    h6 {
       bottom: 0;
       padding: 14px 23px;
       background: var(--orange);
       left: 15px;
       z-index: 2;
       position: relative;
+      @include screen-768 {
+        padding: 10px 20px;
+      }
     }
   }
   .news_content {
@@ -473,6 +533,9 @@
       &:hover {
         color: var(--orange);
       }
+      @include screen-768 {
+        font-size: 19px;
+      }
     }
     p {
       margin-bottom: 13px;
@@ -482,12 +545,9 @@
       font-weight: 700;
       font-size: 16px;
       transition: var(--transition);
-      i {
-        font-size: 12px;
-      }
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
     }
   }
 }
-
-
-

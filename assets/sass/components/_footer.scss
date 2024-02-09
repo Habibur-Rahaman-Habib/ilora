@@ -9,6 +9,9 @@ footer {
     font-weight: 600;
     color: var(--white);
     margin-bottom: 30px;
+    @include screen-992{
+      margin-bottom: 20px;
+    }
   }
   p {
     width: 295px;
@@ -52,6 +55,12 @@ footer {
 
 .footer_bottom {
   padding: 40px 0;
+  @include screen-992{
+    padding: 30px 0;
+  }
+  @include screen-575{
+    padding: 20px 0;
+  }
   p {
     color: var(--white);
   }
@@ -98,6 +107,10 @@ footer {
 }
 
 .footer_subscrive {
+  @include screen-460{
+    margin-bottom: 30px;
+  }
+
   h4 {
     width: 433px;
     margin: auto;
@@ -106,6 +119,9 @@ footer {
   form {
     position: relative;
     height: 64px;
+    @include screen-768{
+      height: 55px;
+    }
     input {
       background: var(--gray);
       width: 100%;
@@ -120,19 +136,30 @@ footer {
     }
     button {
       position: absolute;
-      right: 0px;
+      right: 5px;
       border: none;
-      top: 0px;
-      padding: 18px 46px;
+      top: 5px;
+      padding: 0 46px;
       border: 1px solid transparent;
-      &:hover{
+      height: 83%;
+      &:hover {
         border: 1px solid var(--orange);
       }
-      @media (max-width: 500px) {
-        width: 115px;
+      @include screen-575 {
+        padding: 0 30px;
+      }
+      @include screen-460{
+        position: inherit;
+        right: 0;
       }
     }
   }
+}
+
+.footer_right{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 // back to top
