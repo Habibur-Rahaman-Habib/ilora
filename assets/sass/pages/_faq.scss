@@ -1,42 +1,75 @@
-/*****************website__title***********************/
-.km__website__title{
-    h2{
-        span{
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            margin-bottom: 30px;
-        }
+.sd_accordion1 {
+  .accordion-item {
+    border: 0;
+    box-shadow: 0px 16px 35px 0px rgba(0, 0, 0, 0.15);
+    &:first-of-type .accordion-button {
+      border-radius: 0 !important;
     }
+    &:last-of-type .accordion-button.collapsed {
+      border-radius: 0 !important;
+    }
+    :last-of-type {
+      border-radius: 0 !important;
+    }
+    + .accordion-item {
+      margin-top: 15px;
+    }
+    .accordion-button {
+      background: white;
+      color: var(--black);
+      font-size: 20px;
+      font-weight: 600;
+      font-family: var(--josefin);
+      @include screen-768{
+        font-size: 18px;
+      }
+      &::after {
+        background: none;
+        content: "\2b";
+        font-family: "FontAwesome";
+        width: auto;
+        height: auto;
+      }
+      &:not(.collapsed)::after {
+        content: "\f068";
+      }
+    }
+    .accordion-button {
+      &:not(.collapsed) {
+        background: var(--orange) !important;
+        color: white;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    .accordion-body {
+      background: var(--light_gray);
+    }
+  }
 }
 
-/*********************accordion*******************************/
-.km__submit__section{
-    background: #f9f9f9;
+.cont {
+  p {
+    width: 570px;
+    margin: auto;
+    max-width: 100%;
+  }
+  a.default-btn {
+    padding: 12px 27px;
+  }
 }
 
-.km_accordion {
-    .accordion-item {
-        border: 0; 
-        box-shadow: 0px 16px 35px 0px rgba(0, 0, 0, 0.15);
-        + .accordion-item {
-            margin-top: 15px;
-        }
-        .accordion-button {
-            font-size: 20px;
-            font-weight: 600;
-            &::after {
-                background: none;
-                content: '\f107';
-                font-family: 'FontAwesome';
-                width: auto;
-                height: auto;
-            }
-        }
-        .accordion-button:not(.collapsed) {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
+.site_form3 {
+  form {
+    input {
+      background: white;
+      box-shadow: var(--bs-box-shadow);
+      height: 52px;
     }
+  }
+  textarea{
+    background: white;
+    box-shadow: var(--bs-box-shadow);
+  }
 }
