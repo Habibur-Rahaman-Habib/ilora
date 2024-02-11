@@ -49,7 +49,7 @@
 
 .header_bottom {
   position: relative;
-  @include screen-1199 {
+  @include screen-768 {
     padding: 10px 0;
   }
   .main_menu {
@@ -97,7 +97,10 @@
         opacity: 0;
         visibility: hidden;
         transition: 0.4s;
-        width: 250px;
+        width: 230px;
+        @include screen-992{
+          left: calc(0px - 70px);
+        }
         li {
           + li {
             border-top: 1px solid var(--text);
@@ -156,7 +159,7 @@
   box-shadow: 0px 9px 52px 0px rgba(0, 0, 0, 0.07);
   top: 103%;
   left: 0;
-  width: 100%px;
+  width: 100%;
   padding: 50px;
   opacity: 0;
   visibility: hidden;

@@ -182,16 +182,13 @@
     });
 
     // sticky header
-
-    // $(window).scroll(function () {
-
-    //     if ($(window).scrollTop() > 200) {
-    //         $('.header_bottom').addClass('fixed_menu');
-    //     } else {
-    //         $('.header_bottom').removeClass('fixed_menu');
-    //     }
-    // });
-
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 200) {
+            $('.header_bottom').addClass('fixed_menu');
+        } else {
+            $('.header_bottom').removeClass('fixed_menu');
+        }
+    });
 
     // counter UP
     $(document).ready(function () {
