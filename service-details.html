@@ -36,15 +36,7 @@
   <!--preloader end-->
 
   <!-- scroll to top -->
-  <div class="progress-wrap cursor-pointer active-progress">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="
-            transition: stroke-dashoffset 10ms linear 0s;
-            stroke-dasharray: 307.919, 307.919;
-            stroke-dashoffset: 221.377;
-          "></path>
-    </svg>
-  </div>
+    <button type="button" class="scroll-top-btn"><img src="assets/image/icon/b.png" alt=""></button>
   <!-- scroll to top -->
 
   <!-- header start -->
@@ -101,7 +93,7 @@
           </div>
           <div class="col-xl-8 col-lg-10 col-md-10 d-none d-md-block">
             <ul class="main_menu">
-              <li class="position-relative active">
+              <li class="position-relative ">
                 <a href="javascript:void(0)">Home <i class="fa-solid fa-caret-down"></i></a>
                 <ul class="submenu_wrapper shadow">
                   <li><a href="index.html">Home 1</a></li>
@@ -109,7 +101,7 @@
                   <li><a href="index-3.html">Home 3</a></li>
                 </ul>
               </li>
-              <li><a href="about.html">About Us</a></li>
+              <li class="active"><a href="about.html">About Us </a></li>
               <li class="position-relative">
                 <a href="javascript:void(0)">Services <i class="fa-solid fa-caret-down"></i></a>
                 <ul class="submenu_wrapper shadow">
@@ -130,7 +122,7 @@
                   </li>
                 </ul>
               </li>
-              <li>
+              <li class="active">
                 <a href="javascript:void(0)">Pages <i class="fa-solid fa-caret-down"></i></a>
                 <div class="bi_megamenu shadow">
                   <div class="megamenu_row">
@@ -150,8 +142,8 @@
                         <li>
                           <a href="service-details.html">Service Details</a>
                         </li>
-                        <li><a href="team-member.html">Team Member</a></li>
-                        <li><a href="terms.html">Terms & Condation</a></li>
+                        <li><a href="company-history.html">Company History</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                         <li>
                           <a href="privacypolicy.html">Privacy Policy</a>
                         </li>
@@ -160,46 +152,37 @@
                     <div class="megamenu-column border-end">
                       <h6 class="column-title">Pages</h6>
                       <ul class="pages_list">
-                        <li>
-                          <a href="photo-gallary.html">photo-gallary</a>
-                        </li>
+                        
                         <li><a href="faq.html">faq</a></li>
-                        <li><a href="campaign.html">Campaign</a></li>
+                        <li><a href="#">Our Team</a></li>
                         <li>
-                          <a href="campaign-details.html">Campaign Details</a>
+                          <a href="#">Campaign Details</a>
                         </li>
-                        <li><a href="donate.html">Donate</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="register.html">Contract</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Contract</a></li>
                         <li><a href="404.html">404</a></li>
                       </ul>
                     </div>
                     <div class="megamenu-column border-end">
                       <h6 class="column-title">Blog</h6>
                       <ul class="pages_list">
-                        <li><a href="blog-default.html">Blog Default</a></li>
+                         
                         <li><a href="blog-details.html">Blog Details</a></li>
                         <li><a href="blog-style1.html">Blog Style 1</a></li>
                         <li><a href="blog-style2.html">Blog style 2</a></li>
-                        <li>
-                          <a href="blog-details-left-sidebar.html">Blog Leftsidebar</a>
-                        </li>
-                        <li>
-                          <a href="blog-details-right-sidebar.html">Blog Rightsidebar</a>
-                        </li>
                       </ul>
                     </div>
                     <div class="megamenu-column banner">
                       <div class="megamenu-banner img">
                         <div class="row">
-                          <div class="col-12">
+                          <div class="col-12 mb-2">
                             <div class="fblog_img img">
-                              <a href="blog-details.html"><img src="assets/images/f1.jpg" class="w-100" alt="" /></a>
+                              <a class="pt-0 pb-0" href="blog-details.html"><img src="assets/image/blog/b1.jpg" class="w-100" alt="" /></a>
                             </div>
                           </div>
                           <div class="col-12">
                             <div class="fblog_content">
-                              <a href="blog-details.html">
+                              <a href="blog-details.html" class=" pt-0 pb-0">
                                 A Formula For Help And Happiness</a>
                               <span>18 February, 2022</span>
                             </div>
@@ -213,9 +196,9 @@
               <li class="position-relative">
                 <a href="javascript:void(0)">Blog <i class="fa-solid fa-caret-down"></i></a>
                 <ul class="submenu_wrapper shadow">
-                  <li><a href="blog-default.html">Blog</a></li>
                   <li><a href="blog-style1.html">Blog style 1</a></li>
                   <li><a href="blog-style2.html">Blog style 2</a></li>
+                  <li><a href="blog-details.html">Blog Details</a></li>
                 </ul>
               </li>
               <li><a href="contact.html">Contact Us</a></li>
@@ -380,7 +363,7 @@
                     Do I havae to commint to a contract?
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#km_accordion" style="">
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#km_accordion">
                   <div class="accordion-body">
                     <p>But I Must explain to you how all this mistaken idea of denounching pleasure and praising pain
                       was born and I will give you a complete account of the system,</p>
@@ -561,7 +544,8 @@
   <div class="offcanvas offcanvas-start" id="offcanvas-mobile">
     <div class="offcanvas-body">
       <div class="mobile-menu">
-        <a href="index.html" class="logo py-3"><img src="assets/image/logo.png" alt="logo" class="img-fluid" /></a>
+        <a href="index.html" class="logo py-3"><img src="assets/image/logo.png" alt="logo"
+            class="img-fluid" /></a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
 
         <ul class="accordion accordion-flush mobile_dropdown" id="accordionFlushExample">
@@ -595,14 +579,15 @@
             <div id="flush-collapsetwo" class="accordion-collapse collapse">
               <div class="accordion-body">
                 <ul>
-                  <li><a href="service.html">service</a></li>
+                  <li><a href="company-history.html">Company History</a></li>
+                  <li><a href="service.html">Service</a></li>
                   <li><a href="service-details.html">service Details</a></li>
+                  <li><a href="portfolio-1.html">Portfolio 01 </a></li>
+                  <li><a href="portfolio-2.html">Portfolio 02 </a></li>
+                  <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                  <li><a href="pricing.html">Our Pricing</a></li>
                   <li><a href="faq.html">Faq</a></li>
-                  <li><a href="photo-gallary.html">Photo Gallary</a></li>
-                  <li><a href="donate.html">Donate</a></li>
-                  <li><a href="register.html">Registation</a></li>
-                  <li><a href="privacypolicy.html">Privacy policy</a></li>
-                  <li><a href="terms.html">Terms & Condition</a></li>
+
                 </ul>
               </div>
             </div>
@@ -617,16 +602,9 @@
             <div id="flush-collapsethree" class="accordion-collapse collapse">
               <div class="accordion-body">
                 <ul>
-                  <li><a href="blog-default.html">Blog</a></li>
-                  <li><a href="blog-details.html">Blog Details</a></li>
-                  <li>
-                    <a href="blog-details-left-sidebar.html">Blog Left</a>
-                  </li>
-                  <li>
-                    <a href="blog-details-right-sidebar.html">Blog Right</a>
-                  </li>
                   <li><a href="blog-style1.html">Blog Style 1</a></li>
                   <li><a href="blog-style2.html">Blog Style 2</a></li>
+                  <li><a href="blog-details.html">Blog Details</a></li>
                 </ul>
               </div>
             </div>

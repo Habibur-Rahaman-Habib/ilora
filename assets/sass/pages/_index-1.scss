@@ -3,25 +3,23 @@
   padding: 255px 0;
   background-position: center center;
   position: relative;
-  z-index: 1;
-  &::before {
-    content: "";
-    position: absolute;
-    background: rgb(0 0 0 / 48%);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  @include screen-1199 {
+    padding: 180px 0;
+  }
+  @include screen-768 {
+    padding: 100px 0;
+  }
+  @include screen-575 {
+    padding: 70px 0;
   }
   &.hm1 {
     background: url("../image/banner/b1.jpg") no-repeat;
   }
   &.hm12 {
-    background: url("../image/banner/b1.jpg") no-repeat;
+    background: url("../image/banner/b4.jpg") no-repeat;
   }
   &.hm13 {
-    background: url("../image/banner/b1.jpg") no-repeat;
+    background: url("../image/banner/b5.jpg") no-repeat;
   }
 }
 
@@ -35,6 +33,7 @@
 }
 
 .hm1_hero_slider {
+  background: #fef7f3;
   .slick-slide.slick-active {
     .hm_bg {
       animation: 10s background_animation linear;
@@ -78,10 +77,39 @@
   .prev-arrow {
     left: 78%;
     top: 47%;
+    @include screen-1199{
+      top: inherit;
+      bottom: 40px;
+      left: 47%;
+      transform: translateX(-50%);
+    }
+    @include screen-768{
+      left: 45%;
+      width: 40px;
+      height: 40px;
+    }
+    @include screen-460{
+      left: 42%;
+      bottom: 20px;
+    }
   }
   .next-arrow {
     top: 53%;
     left: 78%;
+    @include screen-1199{
+      top: inherit;
+      bottom: 40px;
+      left: 53%;
+      transform: translateX(-50%);
+    }
+    @include screen-768{
+      width: 40px;height: 40px;
+      left: 55%;
+    }
+    @include screen-768{
+      left: 58%;
+      bottom: 20px;
+    }
   }
 }
 
@@ -164,7 +192,7 @@
     left: 1%;
   }
   @media (max-width: 1120px) {
-    bottom:10%
+    bottom: 10%;
   }
   @media (max-width: 768px) {
     display: none;
@@ -185,7 +213,7 @@
   outline: 9px solid white;
   padding: 6px;
   transform: translateY(-50%);
-  @include screen-768{
+  @include screen-768 {
     right: 10px;
     top: inherit;
     bottom: 10px;
@@ -197,7 +225,7 @@
 
 .welcome_right {
   padding-left: 80px;
-  @include screen-768{
+  @include screen-768 {
     padding-left: 0;
   }
 }

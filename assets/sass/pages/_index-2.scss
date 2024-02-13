@@ -1,3 +1,60 @@
+//banner
+.hm2_hero_slider {
+  &.custom_dots {
+    .slick-dots {
+      top: inherit;
+      bottom: 40px;
+      display: flex;
+      gap: 13px;
+      right: 48%;
+      li {
+        span {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+.hm2_hero_slider .prev-arrow {
+  left: 17%;
+  top: 50%;
+  transform: translateY(-50%);
+  @include screen-992 {
+    top: inherit;
+    bottom: 40px;
+    left: 44%;
+  }
+  @include screen-768 {
+    left: 40%;
+    bottom: 30px;
+  }
+  @include screen-400 {
+    left: 36%;
+    bottom: 10px;
+  }
+}
+.hm2_hero_slider .next-arrow {
+  left: inherit;
+  right: 17%;
+  top: 50%;
+  transform: translateY(-50%);
+  @include screen-992 {
+    top: inherit;
+    bottom: 40px;
+    right: 44%;
+  }
+  @include screen-768 {
+    right: 40%;
+    bottom: 30px;
+  }
+  @include screen-400 {
+    right: 36%;
+    bottom: 10px;
+  }
+}
+
 // service
 .service2 {
   .service_item {
@@ -73,16 +130,108 @@
       font-size: 20px;
     }
   }
-  &:hover{
+  &:hover {
     background: var(--orange);
-    .ex_img{
+    .ex_img {
       background-color: white;
     }
-    .ex_cont{
-      h6{
+    .ex_cont {
+      h6 {
         color: var(--white);
       }
-      p{color: white;}
+      p {
+        color: white;
+      }
+    }
+  }
+}
+
+//work slider
+.work_slider .prev-arrow,
+.work_slider .next-arrow {
+  position: absolute;
+  color: var(--text);
+  z-index: 666;
+  border: none;
+  width: 43px;
+  height: 43px;
+  background: var(--lorange);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  &:hover {
+    background: var(--orange);
+    color: white;
+  }
+  @include screen-400 {
+    width: 35px;
+    height: 35px;
+  }
+}
+.work_slider {
+  .prev-arrow {
+    top: -95px;
+    right: 70px;
+    @include screen-400 {
+      right: 16px;
+    }
+  }
+  .next-arrow {
+    top: -95px;
+    right: 15px;
+    @include screen-400 {
+      top: -50px;
+    }
+  }
+}
+
+// testimonial slider
+.testimonials__slider {
+  &.custom_dots {
+    .slick-dots {
+      right: -2%;
+      @include screen-1260{
+        bottom: -50px;
+        top: inherit;
+        display: flex;
+        gap: 10px;
+        left: 50%;
+      }
+      li {
+      &.slick-active span {
+            background: var(--orange);
+          }
+        span {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--lorange);
+          
+        }
+      }
+    }
+  }
+  .slick-track {
+    padding-bottom: 20px;
+  }
+}
+.testim_item {
+  @include screen-400{
+    flex-wrap: wrap;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--orange);
+  }
+  .testim_content {
+    p {
+      font-style: italic;
     }
   }
 }
