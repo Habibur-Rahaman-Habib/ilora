@@ -1,25 +1,17 @@
 (function ($) {
   /*
-        1. Data Background Function
-        2. Scroll top button
-        3. Offcanvus toggle
+        1. Scroll top button
+        2. Data Background Function
+        3. Fancy box video
         4. Theme Slider Functions
-        5. Pricing Range Slider
-        6. Nice Select
-        7. Checkout Toggle
-        8. Header Sticky
-        9. Mobile Menu
-        10. Header Search 
-        11. Preloader
-        12. Fancybox
-        13. Countdown
-        14. Cart Drawer
-        15. Wow Js
-        16. Count Down
-        17. Accordion Boxs
+        5. Nice Select
+        6. Preloader
+        7. Sticy Header
+        8. Counter Up
+        9. Button Hover Js
     */
 
-  //1. Scroll top button
+  // Scroll top button
   $(window).on("scroll", function () {
     var scrollBar = $(this).scrollTop();
     if (scrollBar > 150) {
@@ -135,6 +127,7 @@
     arrows: false,
     asNavFor: ".bottom__slider",
   });
+  
   $(".bottom__slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -152,7 +145,7 @@
   // Preloader
   setTimeout(() => {
     $(".preloader").fadeOut();
-  }, 1000);
+  }, 1600);
 
   // sticky header
   $(window).scroll(function () {

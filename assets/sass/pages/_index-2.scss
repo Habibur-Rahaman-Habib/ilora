@@ -134,6 +134,12 @@
     background: var(--orange);
     .ex_img {
       background-color: white;
+      svg{
+        path{
+          fill: var(--orange);
+          opacity: 1;
+        }
+      }
     }
     .ex_cont {
       h6 {
