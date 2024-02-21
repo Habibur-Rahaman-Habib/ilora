@@ -15,8 +15,9 @@
   box-shadow: 0px 0px 20px #ee6b0b94;
   padding: 15px 46px;
   font-size: 18px;
-  @include screen-400{
-    padding: 10px 40px;
+  @include screen-575{
+    padding: 10px 30px;
+    font-size: 16px;
   }
   span {
     position: absolute;

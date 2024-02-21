@@ -473,6 +473,11 @@ textarea:focus-visible {
     padding: 50px 0;
   }
 }
+@media (max-width: 460px) {
+  .ptb-110 {
+    padding: 40px 0;
+  }
+}
 
 .pt-110 {
   padding-top: 110px;
@@ -1295,9 +1300,10 @@ textarea:focus-visible {
   padding: 15px 46px;
   font-size: 18px;
 }
-@media (max-width: 400px) {
+@media (max-width: 575.98px) {
   .default-btn {
-    padding: 10px 40px;
+    padding: 10px 30px;
+    font-size: 16px;
   }
 }
 .default-btn span {
@@ -1787,6 +1793,7 @@ footer {
     left: 45%;
     width: 40px;
     height: 40px;
+    bottom: 30px;
   }
 }
 @media (max-width: 460px) {
@@ -1813,10 +1820,11 @@ footer {
   .hm1_hero_slider .next-arrow {
     width: 40px;
     height: 40px;
+    bottom: 30px;
     left: 55%;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 460px) {
   .hm1_hero_slider .next-arrow {
     left: 58%;
     bottom: 20px;
