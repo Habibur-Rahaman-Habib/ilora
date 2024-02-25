@@ -47,6 +47,7 @@ h5 {
 
 .h6,h6 {
   font-size: 18px;
+  margin-bottom: 0;
   @include screen-768 {
     font-size: 17px;
   }

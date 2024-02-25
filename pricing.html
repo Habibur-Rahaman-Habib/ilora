@@ -103,7 +103,7 @@
                   <li><a href="index-3.html">Home 3</a></li>
                 </ul>
               </li>
-              <li class="active"><a href="about.html">About Us </a></li>
+              <li class=""><a href="about.html">About Us </a></li>
               <li class="position-relative">
                 <a href="javascript:void(0)">Services <i class="fa-solid fa-caret-down"></i></a>
                 <ul class="submenu_wrapper shadow">
@@ -140,14 +140,14 @@
                       <h6 class="column-title">Pages</h6>
                       <ul class="pages_list">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="service.html">Service</a></li>
+                         <li><a href="service-1.html">Service</a></li>
                         <li>
                           <a href="service-details.html">Service Details</a>
                         </li>
                         <li><a href="company-history.html">Company History</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li>
-                          <a href="privacypolicy.html">Privacy Policy</a>
+                          <a href="#">Privacy Policy</a>
                         </li>
                       </ul>
                     </div>
@@ -631,27 +631,29 @@
     <!-- footer section end -->
 
   <!-- mobile menu offcanvas -->
-  <div class="offcanvas offcanvas-start" id="offcanvas-mobile">
-    <div class="offcanvas-body">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-mobile">
+
+    <div class="offcanvas-body light_dark_bg">
       <div class="mobile-menu">
-        <a href="index.html" class="logo py-3"><img src="assets/image/logo.png" alt="logo"
-            class="img-fluid" /></a>
+        <a href="index.html" class="logo py-3"><img src="assets/image/logo.png" alt="logo" class="img-fluid" /></a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
 
-        <ul class="accordion accordion-flush mobile_dropdown" id="accordionFlushExample">
+
+        <ul class="accordion mobile_dropdown" id="accordionExample">
           <li class="accordion-item">
-            <h2>
-              <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false">
+            <h2 id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Home
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse">
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <ul>
-                  <li><a href="index.html">Home Page 1</a></li>
-                  <li><a href="index-2.html">Home Page 2</a></li>
-                  <li><a href="index-3.html">Home Page 3</a></li>
+                  <li><a href='index.html'>Home 01</a></li>
+                  <li><a href='index-2.html'>Home 02</a></li>
+                  <li><a href='index-3.html'>Home 03</a></li>
                 </ul>
               </div>
             </div>
@@ -660,49 +662,53 @@
             <h2><a href="about.html">About</a></h2>
           </li>
           <li class="accordion-item">
-            <h2>
-              <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapsetwo" aria-expanded="false">
+            <h2 id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Pages
               </button>
             </h2>
-            <div id="flush-collapsetwo" class="accordion-collapse collapse">
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <ul>
                   <li><a href="company-history.html">Company History</a></li>
-                  <li><a href="service.html">Service</a></li>
+                   <li><a href="service-1.html">Service</a></li>
                   <li><a href="service-details.html">Service Details</a></li>
                   <li><a href="portfolio-1.html">Portfolio 01 </a></li>
                   <li><a href="portfolio-2.html">Portfolio 02 </a></li>
                   <li><a href="portfolio-details.html">Portfolio Details</a></li>
                   <li><a href="pricing.html">Our Pricing</a></li>
                   <li><a href="faq.html">Faq</a></li>
-
                 </ul>
               </div>
             </div>
           </li>
           <li class="accordion-item">
-            <h2>
-              <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapsethree" aria-expanded="false">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Blog
               </button>
             </h2>
-            <div id="flush-collapsethree" class="accordion-collapse collapse">
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <ul>
-                  <li><a href="blog-style1.html">Blog Style 1</a></li>
-                  <li><a href="blog-style2.html">Blog Style 2</a></li>
-                  <li><a href="blog-details.html">Blog Details</a></li>
+                  <ul>
+                    <li><a href="blog-style1.html">Blog Style 1</a></li>
+                    <li><a href="blog-style2.html">Blog Style 2</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                  </ul>
                 </ul>
               </div>
             </div>
           </li>
           <li class="accordion-item">
-            <h2><a href="contact.html">Contact</a></h2>
+            <h2><a href='contact.html'>Contact</a></h2>
           </li>
         </ul>
+
       </div>
     </div>
   </div>

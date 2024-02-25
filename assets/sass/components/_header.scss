@@ -220,6 +220,17 @@
 .mobile_dropdown {
   margin-top: 40px;
   li {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    &:first-of-type{
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      .accordion-button {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+    }
     h2 {
       a {
         display: block;
@@ -253,6 +264,9 @@
       }
     }
     button {
+      &:focus{
+        box-shadow: none;
+      }
       &:not(.collapsed) {
         background-color: transparent;
         box-shadow: none;
@@ -272,6 +286,7 @@
     }
   }
 }
+
 
 
 /* for sticky header */

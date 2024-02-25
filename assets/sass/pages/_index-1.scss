@@ -76,8 +76,8 @@
 .hm1_hero_slider {
   .prev-arrow {
     left: 78%;
-    top: 47%;
-    @include screen-1199 {
+    top: 51%;
+    @include screen-1260 {
       top: inherit;
       bottom: 40px;
       left: 47%;
@@ -95,9 +95,9 @@
     }
   }
   .next-arrow {
-    top: 53%;
+    top: 57%;
     left: 78%;
-    @include screen-1199 {
+    @include screen-1260 {
       top: inherit;
       bottom: 40px;
       left: 53%;
@@ -443,6 +443,9 @@
   background: url("../image/banner/b2.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  @include screen-575{
+    padding-bottom: 90px;
+  }
   .testi_slider {
     h5 {
       span {
